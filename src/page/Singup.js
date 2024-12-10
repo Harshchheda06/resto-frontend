@@ -89,7 +89,7 @@ const Singup = () => {
         <div className="w-20 h-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto relative">
           <img
             src={data.image ? data.image : loginSignupImage}
-            className="w-full h-full"
+            className="w-full h-full" alt=""
           />
           <label htmlFor="profileImage">
             <div className="absolute bottom-0 h-1/3  bg-slate-500 bg-opacity-50 w-full text-center cursor-pointer">

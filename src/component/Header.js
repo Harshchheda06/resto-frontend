@@ -27,9 +27,9 @@ const Header = () => {
     <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
-          <div className="flex max-w-4xl mx-auto ">
-            <img src={logo} className="rounded-full h-20 " />
-            <h2 className=" font-bold text-2xl dark:text-red-700 p-4 md:hidden md:flex">
+          <div className="flex max-w-4xl mx-auto">
+            <img src={logo} className="rounded-full h-20" />
+            <h2 className="font-bold text-2xl dark:text-red-700 p-4 md:hidden md:flex">
               Aana Zoor
             </h2>
           </div>
@@ -69,7 +69,8 @@ const Header = () => {
                   </Link>
                 )}
 
-                {userData ? (
+                {/* Check if user is logged in (i.e., userData._id is available) */}
+                {userData._id ? (
                   <p className="cursor-pointer text-white px-2 bg-red-500" onClick={handleLogout}>
                     Logout ({userData.firstName})
                   </p>
@@ -81,9 +82,6 @@ const Header = () => {
 
                 <nav className="text-base md:text-lg flex flex-col md:hidden">
                   <Link to={""} className="px-2 py-1">Home</Link>
-                  {/* <Link to={"menu/646b5548acd0a88a674b9429"} className="px-2 py-1">Menu</Link> */}
-                  {/* <Link to={"about"} className="px-2 py-1">About</Link> */}
-                  {/* <Link to={"contact"} className="px-2 py-1">Contact</Link> */}
                 </nav>
               </div>
             )}

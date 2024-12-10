@@ -1,14 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef } from "react";
 import { useSelector } from "react-redux";
 import CardFeature from "../component/CardFeature";
-import HomeCard from "../component/HomeCard";
-import { GrPrevious, GrNext } from "react-icons/gr";
-import FilterProduct from "../component/FilterProduct";
+// import HomeCard from "../component/HomeCard";
+// import { GrPrevious, GrNext } from "react-icons/gr";
+// import FilterProduct from "../component/FilterProduct";
 import AllProduct from "../component/AllProduct";
 
 const Home = () => {
   const productData = useSelector((state) => state.product.productList);
-  const homeProductCartList = productData.slice(20, 25);
+  // const homeProductCartList = productData.slice(20, 25);
   const speciality = productData.filter(
     (el) => el.category === "speciality",
     []
